@@ -639,7 +639,7 @@ static int l_sqlite3_row_mode(lua_State * L, int mode)
         break;
       
       default:
-        report_error(L, "libluasqlite3: Internal error in sqlite3_row_mode");
+        report_error(L, "lua-sqlite3: Internal error in sqlite3_row_mode");
     }
   
   if (mode)
@@ -942,7 +942,7 @@ static void func_callback_wrapper(int which, sqlite3_context * ctx, int num_args
   if (lua_isnil(L, -1))
   {
     lua_pop(L, 1);
-    fprintf(stderr, "libluasqlite3: func_callback_wrapper: Warning: function is null\n");
+    fprintf(stderr, "lua-sqlite3: func_callback_wrapper: Warning: function is null\n");
     return;
   }
   
@@ -956,7 +956,7 @@ static void func_callback_wrapper(int which, sqlite3_context * ctx, int num_args
   
   if (lua_pcall(L, values ? 3 : 1, 0, 0))
   {
-    fprintf(stderr, "libluasqlite3: func_callback_wrapper: Warning: user function error: %s\n", lua_tostring(L, -1));
+    fprintf(stderr, "lua-sqlite3: func_callback_wrapper: Warning: user function error: %s\n", lua_tostring(L, -1));
     sqlite3_result_error(ctx, lua_tostring(L, -1), lua_strlen(L, -1));
     lua_pop(L, 1);
   }
@@ -1220,7 +1220,7 @@ FUNC( l_sqlite3_result )
       break;
     
     default:
-      report_error(L, "libluasqlite3: Api usage error: Invalid argument to l_sqlite3_result:");
+      report_error(L, "lua-sqlite3: Api usage error: Invalid argument to l_sqlite3_result:");
   }
   
   return 0;
@@ -1319,7 +1319,7 @@ FUNC( l_sqlite3_value )
       break;
     
     default:
-      report_error(L, "libluasqlite3: Internal error: Unknonw SQLITE data type.");
+      report_error(L, "lua-sqlite3: Internal error: Unknonw SQLITE data type.");
   }
   return 1;
 }
