@@ -12,7 +12,7 @@ DATADIR = /usr/share/lua/$(LUAVER)
 
 $(LIB).so: ${SRCS:.c=.o}
 	cc -shared -o $(LIB).so ${CFLAGS} ${SRCS:.c=.o} $(LIBS)
-	m4 -DSHARED_LIB_PATH=$(LUADIR) < libluasqlite3-loader.lua.in > libluasqlite3-loader.lua
+	m4 -DSHARED_LIB_PATH=$(LIBDIR) < libluasqlite3-loader.lua.in > libluasqlite3-loader.lua
 
 clean:
 	rm -f *.o *.so

@@ -27,7 +27,7 @@
 --]]--------------------------------------------------------------------------
 
 
-local shared_lib_name = "libluasqlite3.so"
+local shared_lib_name = "sqlite3.so"
 local shared_lib_init = "luaopen_sqlite3"
 local shared_lib_path = "SHARED_LIB_PATH"
 
