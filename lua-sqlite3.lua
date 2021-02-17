@@ -43,7 +43,7 @@ TODO:
 local _VERSION = '0.4.2'
 local _NAME    = 'Lua-Sqlite3'
 
-local core = require "sqlite3.core"
+local core = require "lua-sqlite3.core"
 local api, ERR, TYPE, AUTH, FLAGS = core.api, core.errors, core.types, core.auth, core.flags
 
 local ERR_NAMES = {}

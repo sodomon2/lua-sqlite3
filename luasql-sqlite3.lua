@@ -60,7 +60,7 @@ local function isref(t)		return t.ref_counter > 0 end
 
 function luasql.sqlite3()
   if not core then 
-    core = require "sqlite3.core"
+    core = require "lua-sqlite3.core"
     api, ERR, TYPE, AUTH = core.api, core.errors, core.types, core.auth
   end
   

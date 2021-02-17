@@ -27,7 +27,7 @@
 --]]--------------------------------------------------------------------------
 
 
-local sqlite3 = require "sqlite3"
+local sqlite3 = require "lua-sqlite3"
 
 local os = os
 

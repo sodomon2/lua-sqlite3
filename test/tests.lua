@@ -27,7 +27,7 @@
 --]]--------------------------------------------------------------------------
 
 pcall(require, "luacov")
-local sqlite3 = require "sqlite3"
+local sqlite3 = require "lua-sqlite3"
 
 print("------------------------------------")
 print("Module    name: " .. sqlite3._NAME);

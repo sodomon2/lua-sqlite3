@@ -1,6 +1,5 @@
-
 require "path"
-require "sqlite3"
+require "lua-sqlite3"
 
 
 local db = sqlite3.open_memory()

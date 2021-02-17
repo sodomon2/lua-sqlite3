@@ -28,7 +28,7 @@
 
 
 
-local luasql = require "sqlite3.luasql"
+local luasql = require "lua-sqlite3.luasql"
 
 local os = os
 
