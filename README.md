@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/moteus/lua-sqlite3.svg?branch=master)](https://travis-ci.org/moteus/lua-sqlite3)
 <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/sodomon2/lua-sqlite3?label=last%20release">
+![LuaRocks](https://img.shields.io/luarocks/v/sodomon2/lua-sqlite3)
 
 ### Changes since 0.4.2
  * Support for lua 5.4
