@@ -1,8 +1,8 @@
 # Lua-Sqlite3 is a sqlite3 wrapper for Lua
 
-[![Build Status](https://travis-ci.org/moteus/lua-sqlite3.svg?branch=master)](https://travis-ci.org/moteus/lua-sqlite3)
-<img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/sodomon2/lua-sqlite3?label=last%20release">
-![LuaRocks](https://img.shields.io/luarocks/v/sodomon2/lua-sqlite3)
+![Travis (.org)](https://img.shields.io/travis/moteus/lua-sqlite3?color=green-light&style=for-the-badge)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/sodomon2/lua-sqlite3?color=green-light&label=latest-release&style=for-the-badge)
+![LuaRocks](https://img.shields.io/luarocks/v/sodomon2/lua-sqlite3?color=green-light&style=for-the-badge)
 
 ### Changes since 0.4.2
  * Support for lua 5.4
