@@ -25,15 +25,15 @@ external_dependencies = {
 
 build = {
   type = "builtin",
-  copy_directories = { '../examples' },
+  copy_directories = { 'examples' },
   modules = {
     ["lua-sqlite3.core"] = {
-      sources   = { "../libluasqlite3.c"  },
+      sources   = { "lua-sqlite3.c"  },
       libraries = { "sqlite3"          },
       incdirs   = { "$(SQLITE_INCDIR)" },
       libdirs   = { "$(SQLITE_LIBDIR)" }
     },
-    ["lua-sqlite3.luasql"] = "../luasql-sqlite3.lua",
-    ["lua-sqlite3"]        = "../lua-sqlite3.lua",
+    ["lua-sqlite3.luasql"] = "luasql-sqlite3.lua",
+    ["lua-sqlite3"]        = "lua-sqlite3.lua",
   },
 }
