@@ -27,11 +27,6 @@
 --]]--------------------------------------------------------------------------
 
 pcall(require, "luacov")
-
-local has_lunit = not not lunit
-
-local lunit = require "lunit"
-
 local sqlite3 = require "sqlite3"
 
 print("------------------------------------")
@@ -42,11 +37,4 @@ print("SQLite  thread: " .. sqlite3.threadsafe());
 print("Lua    version: " .. (_G.jit and _G.jit.version or _G._VERSION))
 print("------------------------------------")
 print("")
-
-require "tests-sqlite3"
-require "tests-luasql"
-
-if not has_lunit then
-  lunit.run()
-end
 
