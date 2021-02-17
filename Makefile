@@ -20,7 +20,10 @@ $(LIB).so: ${SRCS:.c=.o}
 clean:
 	rm -f *.o *.so
 	rm -f libluasqlite3-loader.lua
-    
+
+check:
+	$(LUA) test/tests.lua
+
 install:
 	install -m 755 $(LIB).so $(DESTDIR)$(LIBDIR)/
 	install -m 755 $(FILES) $(DESTDIR)$(DATADIR)/
@@ -30,3 +33,5 @@ uninstall:
 	rm -f $(DESTDIR)$(DATADIR)/sqlite3.lua
 	rm -f $(DESTDIR)$(DATADIR)/luasql-sqlite3.lua
 	rm -f $(DESTDIR)$(DATADIR)/libluasqlite3-loader.lua
+
+.PHONY: $(LIB).so
