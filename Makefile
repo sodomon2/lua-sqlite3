@@ -3,7 +3,7 @@ LUA_CFLAGS = $(shell pkg-config --cflags $(LUA))
 LUA_LIBS = $(shell pkg-config --libs $(LUA))
 
 FILES   = lua-sqlite3.lua lua-sqlite3-loader.lua
-SRCS    = libluasqlite3.c
+SRCS    = lua-sqlite3.c
 LIB     = core
  
 LUAVER  = $(shell $(LUA) -v 2>&1 | cut -c 5-7)
