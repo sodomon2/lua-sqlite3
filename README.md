@@ -1,13 +1,13 @@
 # Lua-Sqlite3 is a sqlite3 wrapper for Lua
 
-[![Build Status](https://travis-ci.org/sodomon2/lua-sqlite3.svg?branch=master)](https://travis-ci.org/sodomon2/lua-sqlite3)
-[![Coverage Status](https://coveralls.io/repos/sodomon2/lua-sqlite3/badge.svg?branch=master&service=github)](https://coveralls.io/github/sodomon2/lua-sqlite3?branch=master)
+[![Build Status](https://travis-ci.org/moteus/lua-sqlite3.svg?branch=master)](https://travis-ci.org/moteus/lua-sqlite3)
+<img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/sodomon2/lua-sqlite3?label=last%20release">
 
 ### Changes since 0.4.2
  * Support for lua 5.4
  * Added `Makefile build` support
- * Removed `Autoconf``support
- * Removed `lake``support
+ * Removed `Autoconf` support
+ * Removed `lake` support
  * Removed `LuaCov` file
  * `libluasqlite3` renamed to `sqlite3`
 
