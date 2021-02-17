@@ -1,16 +1,16 @@
-package = "sqlite3"
+package = "lua-sqlite3"
 version = "scm-0"
 
 source = {
-  url = "https://github.com/moteus/lua-sqlite3/archive/master.zip",
+  url = "https://github.com/sodomon2/lua-sqlite3/archive/master.zip",
   dir = "lua-sqlite3-master"
 }
 
 description = {
-  summary = "Lua-Sqlite3 is a SQLite3 wrapper for Lua",
+  summary = "lua-sqlite3 is a SQLite3 wrapper for Lua",
   -- detailed = [[]],
   license = "MIT/X11",
-  homepage = "http://www.mroth.net/lua-sqlite3"
+  homepage = "https://github.com/sodomon2/lua-sqlite3"
 }
 
 dependencies = {
@@ -27,13 +27,13 @@ build = {
   type = "builtin",
   copy_directories = { 'examples' },
   modules = {
-    ["sqlite3.core"] = {
+    ["lua-sqlite3.core"] = {
       sources   = { "libluasqlite3.c"  },
-      libraries = { "sqlite3"          },
+      libraries = { "sqlite3", "lua"   },
       incdirs   = { "$(SQLITE_INCDIR)" },
       libdirs   = { "$(SQLITE_LIBDIR)" }
     },
-    ["sqlite3.luasql"] = "luasql-sqlite3.lua",
-    ["sqlite3"]        = "sqlite3.lua",
+    ["lua-sqlite3.luasql"] = "luasql-sqlite3.lua",
+    ["lua-sqlite3"]        = "lua-sqlite3.lua",
   },
 }
