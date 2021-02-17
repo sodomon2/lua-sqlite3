@@ -1,11 +1,14 @@
+LUA = lua
+LUA_CFLAGS = $(shell pkg-config --cflags $(LUA))
+LUA_LIBS = $(shell pkg-config --libs $(LUA))
+
 FILES   = sqlite3.lua luasql-sqlite3.lua libluasqlite3-loader.lua
 SRCS    = libluasqlite3.c
 LIB     = sqlite3
  
-LUAVER  = $(shell lua -v 2>&1 | cut -c 5-7)
-LUA     = -llua$(LUAVER)
-CFLAGS  = -O3 -Wall -fPIC -I/usr/include -I/usr/include/$(LUAVER)
-LIBS    = -lsqlite3 $(LUA) -lm
+LUAVER  = $(shell $(LUA) -v 2>&1 | cut -c 5-7)
+CFLAGS  = -O3 -Wall -fPIC $(LUA_CFLAGS)
+LIBS    = -lsqlite3 $(LUA_LIBS)
 
 LIBDIR  = /usr/lib/lua/$(LUAVER)
 DATADIR = /usr/share/lua/$(LUAVER)
