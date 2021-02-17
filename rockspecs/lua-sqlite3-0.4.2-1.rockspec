@@ -29,7 +29,7 @@ build = {
   modules = {
     ["lua-sqlite3.core"] = {
       sources   = { "libluasqlite3.c"  },
-      libraries = { "sqlite3", "lua"   },
+      libraries = { "sqlite3"          },
       incdirs   = { "$(SQLITE_INCDIR)" },
       libdirs   = { "$(SQLITE_LIBDIR)" }
     },
